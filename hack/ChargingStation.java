@@ -6,7 +6,7 @@ public class ChargingStation {
 
         Scanner sc = new Scanner(System.in);
 
-        int vehicles = sc.nextInt();   // number of cars
+        int vehicles = sc.nextInt();  
         int[] arrivalTime = new int[vehicles];
 
         
@@ -14,10 +14,9 @@ public class ChargingStation {
             arrivalTime[i] = sc.nextInt();
         }
 
-        int chargingTime = sc.nextInt();  // time required
-        int totalChargers = sc.nextInt(); // available chargers
-
-        int[] nextFree = new int[totalChargers]; // track free time
+        int chargingTime = sc.nextInt();  
+        int totalChargers = sc.nextInt(); 
+        int[] nextFree = new int[totalChargers]; 
         int[] waiting = new int[vehicles];
 
        
@@ -25,8 +24,7 @@ public class ChargingStation {
 
             int minPos = 0;
 
-            // find charger which is free earliest
-            for (int j = 0; j < totalChargers; j++) {
+                for (int j = 0; j < totalChargers; j++) {
                 if (nextFree[j] < nextFree[minPos]) {
                     minPos = j;
                 }
